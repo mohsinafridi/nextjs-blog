@@ -3,6 +3,7 @@ import CoverImage from './cover-image';
 import DateFormatter from './date-formatter';
 import { type Author } from '@/app/interfaces/author';
 import { PostTitle } from './post-title';
+import Tag from './tag';
 
 type Props = {
   title: string;
@@ -15,6 +16,7 @@ export function PostHeader({ title, coverImage, date, author }: Props) {
   return (
     <>
       <PostTitle>{title}</PostTitle>
+        <Tag />
       <div className="hidden md:block md:mb-12">
         <Avatar name={author.name} picture={author.picture} />
       </div>
