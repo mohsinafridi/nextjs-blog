@@ -3,9 +3,9 @@ import { CMS_NAME, HOME_OG_IMAGE_URL } from '@/app/lib/constants';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import cn from 'classnames';
-// import { ThemeSwitcher } from './_components/theme-switcher';
 
 import './globals.css';
+import Navbar from './_components/navbar';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -60,7 +60,8 @@ export default function RootLayout({
       <body
         className={cn(inter.className, 'dark:bg-slate-900 dark:text-slate-400')}
       >
-        {/* <ThemeSwitcher /> */}
+
+        <Navbar />
         <div className="min-h-screen">{children}</div>
         <Footer />
       </body>
